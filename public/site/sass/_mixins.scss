@@ -1,0 +1,11 @@
+// Font Mixins
+
+@mixin body-font {
+  font-family: "Roboto", Arial, sans-serif, 'FontAwesome';
+  font-size: 14px;
+}
+
+@mixin heading-font {
+  font-family: "Roboto", Arial, sans-serif;
+  text-transform: uppercase;
+}

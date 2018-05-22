@@ -1,0 +1,128 @@
+@import "variables";
+@import "mixins";
+
+.heading {
+  border-bottom: 2px solid $theme-primary;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  span {
+    background-color: $theme-primary;
+    color: #fff;
+    padding: 6px 12px;
+    display: inline-block;
+  }
+}
+
+ul.list-links {
+  margin-bottom: 0;
+  li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 5px 0;
+  }
+}
+
+.box-meta {
+  font-size: 12px;
+  margin-bottom: 15px;
+  .item {
+    margin-right: 15px;
+    &:before {
+      content: '';
+      margin-right: 5px;
+      color: $gray-light;
+    }
+    &.date:before {
+      content: '\f073';
+    }
+    &.auth:before {
+      content: '\f007';
+    }
+    &.comment:before {
+      content: '\f075';
+    }
+    &.tag:before {
+      content: '\f02c';
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: $gray-light;
+      &:hover {
+        color: $theme-primary;
+      }
+    }
+  }
+}
+
+.item-news {
+  margin-bottom: 15px;
+  figure {
+    width: 100%;
+    padding-bottom: 60%;
+    margin-bottom: 0;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .content {
+    padding: 10px 10px 0;
+    border: 1px solid $gray-lighter;
+    .box-meta {
+      margin-bottom: 0;
+      &.top {
+        margin-bottom: 10px;
+      }
+      &.bottom {
+        margin: 0 -10px;
+        background-color: $gray-lighter;
+        padding: 10px;
+      }
+    }
+    .desc {
+      margin-bottom: 10px;
+    }
+  }
+
+  &.verticle {
+    .content {
+      border-top: 0;
+    }
+  }
+
+  &.horizontal {
+    .image {
+      width: calc(100% / 3);
+      figure {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .content {
+      width: calc((100% / 3) * 2);
+      border-left: 0;
+      position: relative;
+    }
+  }
+}
+
+.links {
+  .item {
+    margin-bottom: 10px;
+    a {
+      color: $theme-primary;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,400,400i,900,900i&subset=vietnamese');
+@import "variables";
+@import "mixins";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  @include body-font;
+  background-color: $gray-lighter;
+  padding: 10px 0;
+}
+
+a {
+  color: #000;
+  transition: all .3s ease-in-out;
+
+  &:hover, &:focus, &:active, &.active {
+    color: $theme-primary;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+  }
+}
+
+*:focus {
+  outline: 0 !important;
+  box-shadow: none !important
+}
+
+@import "overwrite";
+@import "layout";
+@import "component";
